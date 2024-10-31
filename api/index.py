@@ -74,5 +74,9 @@ def cleanup():
         del test_results[test_id]
     return {'status': 'cleaned'}
 
+@app.route('/', methods=['GET'])
+def home():
+    return '<h1>Welcome to the TR-143 test server!</h1>'
+
 if __name__ == '__main__':
     app.run()
